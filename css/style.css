@@ -1,0 +1,79 @@
+div ~p {
+    color:blue;
+}
+
+/* selector laczony */
+div.connected p {
+    color:green;
+}
+
+/* before after */
+
+div.connected p::before{
+    content: '';
+    color:red;
+}
+
+div.connected p::after{
+    content: '45342';
+    color: yellow;
+}
+/* psuedoklasy */
+.hover a{
+    color:green;
+    text-decoration:none;
+}
+
+.hover a:hover{
+    color:red;
+}
+
+form input:focus{
+    border: 2px solid #002200;
+ 
+}
+
+ul li:first-child{
+    color: violet;
+}
+
+ul li:last-child{
+    color: violet;
+}
+
+/* ul:nth-last-of-type(even){
+    color:red;
+} */
+
+ul li:nth-of-type(2n +2){
+    color: orange;
+}
+
+
+/* selector atrybutow */
+input[title]{
+    border:3px solid blue;
+}
+
+/* posiada atrybu (np title) z konkretna wartoscia */
+input[title="piaty"]{
+    border: 3px solid red;
+}
+
+/*sprawdza czy wystepuje string  (laczony bez spacji)*/
+input[title~="input"]{
+    border: 3px solid yellow;
+}
+
+/*czy zawiera ciag znakow  / ^czy zaczyna sie   / $czy konczy sie */
+input[title*="pi"]{
+    border: 3px solid brown;
+}
+
+input[title$="tni"]{
+    border: 2px dashed black;
+}
+
+input[title^="za"]{
+    border: 2px dotted black;
+}
