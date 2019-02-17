@@ -4,19 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Zadanie domowe - Formularz HTML5</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <nav id="main-nav">
+        <ul>
+            <li class="list-item">list 1</li>
+            <li class="list-item">list 2</li>
+            <li class="list-item">list 3</li>
+            <li class="list-item">list 4</li>
+            <li class="list-item">list 5</li>
+        </ul>
+    </nav>
    
     <!-- Zadanie domowe zrob z wykorzystaniem serwisu https://formspree.io -->
-    
+ 
     <form action="https://formspree.io/l.badocha@arena108.pl" method="POST">
         <label for="name">Imię:</label>
         <input type="text" name="name" id="name">
 
         <br>
         <label for="lastname">Nazwisko:</label>
-        <input type="text" name="lastname" id="lastname">
+        <input type="text" name="lastname" id="lastname" disabled>
 
         <br>
         <label for="mail">E-mail:</label>
@@ -30,13 +40,13 @@
         <label for="city">Wybierz miasto:</label>
         <select name="city" id="city">
             <option value="krakow">Kraków</option>
-            <option value="warszawa">Warszawa</option>
+            <option value="warszawa" selected>Warszawa</option>
             <option value="gdansk">Gdańsk</option>
         </select>
 
         <br>
       	<p>Wybierz płeć:</p>
-        <input type="radio" name="gender" value="male" id="male"><label for="male">Mężczyzna</label>
+        <input type="radio" name="gender" value="male" id="male"><label for="male" selected>Mężczyzna</label>
         <br>
         <input type="radio" name="gender" value="female" id="female"><label for="female">Kobieta</label>
         <br>
@@ -51,5 +61,16 @@
         <input type="submit" value="Send">
     </form>
 </body>
+    
+
+    <section class="relative">
+    <div class="orange">
+    <p>position:relative</p>
+
+    </div>
+    <div class="grey">
+
+    </div>
+    </section>
 
 </html>
